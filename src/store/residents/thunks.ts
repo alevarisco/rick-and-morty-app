@@ -7,7 +7,7 @@ export const getResidents = (residents = []) => {
         dispatch(startLoadingLocations())
         let residentsArray: any[] = [];
         const residentPromises = residents
-                .filter(c => c !== null && c !== undefined) // Filtrar elementos no válidos
+                .filter(c => c !== null && c !== undefined)
                 .map(async (c) => {
                     const { data } = await client.create().get(c);
                     return data;

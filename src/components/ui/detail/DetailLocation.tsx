@@ -22,11 +22,11 @@ export default function DetailLocation({id}) {
             <h1 className='antialiased text-4xl font-semibold my-7'>
               {location.name}
             </h1>
-            <h3>{location.air_date}</h3>
+            <h2>{location.type} - {location.dimension}</h2>
 
             {residents && (
                 <div className="py-5">
-                    <h3 className="font-bold">Residentes</h3>
+                    <h3 className="font-bold">Habitantes</h3>
                     <Carousel persons={residents}/>
                 </div>
             )}
